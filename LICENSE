@@ -1,6 +1,8 @@
+(Normally I'd use a GNU license but I figured it's clearer this way that this template *doesn't* require you to open source the projects you make with it. The MIT license also does actually apply, this isn't a weird mix of it and a GNU, I'm just explaining my reasoning. (also, wow, this license is so much easier to add :/))
+
 MIT License
 
-Copyright (c) 2022 hedgehog125
+Copyright (c) 2022 Nicholas Clack (Hedgehog125)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
