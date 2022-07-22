@@ -7,4 +7,5 @@ rm README.md
 mv -f tmpScripts/newData/credits.txt credits.txt
 # rm -r tmpScripts
 
-echo "Cleaned up.\n";
+echo "Cleaned up.
+";

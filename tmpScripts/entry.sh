@@ -12,4 +12,6 @@ then
     ./tmpScripts/cleanUp.sh
 fi
 
-echo "\nAll done. Although you'll need to set up git yourself.\nTip: Run devInstall.sh to install the dependancies if you're on a new machine."
+echo "
+All done. Although you'll need to set up git yourself.
+Tip: Run devInstall.sh to install the dependancies if you're on a new machine."
