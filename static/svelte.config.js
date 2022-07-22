@@ -1,6 +1,6 @@
 import adapter from "@sveltejs/adapter-static";
 
-const URL_PREFIX = "build"; // <-- Set this to the repository name if you're hosting on github pages (unless it's your homepage site), as all the URLs will need to be prefixed with it
+const URL_PREFIX = "SvelteKit-Template"; // <-- Set this to the repository name if you're hosting on github pages (unless it's your homepage site), as all the URLs will need to be prefixed with it
 
 
 const dev = process.env.NODE_ENV != "production";
