@@ -5,8 +5,11 @@ This probably isn't anything special, it's just a template for SvelteKit that's 
 Run in a Linux terminal from what you want to be the parent folder for the project:
 
 ```
-npx degit https://hedgehog125.github.io/SvelteKit-Template.git
-./SvelteKit-Template/tmpScripts/entry.sh
+read -p "What do you want to call the project? (no spaces) " projectName
+mkdir -p ${projectName}
+cd ${projectName}
+npx degit https://github.com/hedgehog125/SvelteKit-Template.git
+tmpScripts/entry.sh
 ```
 
 # Manual installation

@@ -1,9 +1,6 @@
-cd $(dirname $0)/../../ # The parent folder
+cd $(dirname $0)/../ # The project folder
 realpath .
 
-# read -p "What do you want to call the project? (no spaces) " projectName
-# mv SvelteKit-Template ${projectName}
-# cd ${projectName}
 # ./install.sh
 
 realpath .
