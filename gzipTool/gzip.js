@@ -77,6 +77,9 @@ const main = async _ => {
 
     for (let fileInfo of buildFiles) {
         let newfilePath = path.sandboxPath(path.join(gzipPath, fileInfo.path));
+        let fileName = path.basename(newfilePath);
+        if (fileName[0] == ".") continue;
+        
 
         if (fileInfo.isFolder) {
             await fs.mkdir(newfilePath);

@@ -20,6 +20,6 @@ const assetsToPreload = {
 </script>
 
 <main>
-	<a hr ef={linkPage("hmm")}>Look, this works! :0</a>
+	<a href={linkPage("hmm")}>Look, this works! :0</a>
 </main>`
 };

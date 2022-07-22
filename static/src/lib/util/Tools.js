@@ -1,5 +1,5 @@
 export const format = {
-	time: (total, count) => {
+	time: (total, count = 3) => {
 		let hours = Math.floor(total / (60 * 60));
 		total -= hours * (60 * 60);
 		let minutes = Math.floor(total / 60);

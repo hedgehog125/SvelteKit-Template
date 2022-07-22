@@ -1,8 +1,14 @@
 <script>
+	import { onMount } from "svelte";
 	import MobileNewline from "$util/MobileNewline.svelte";
 	import linkPage from "$util/LinkPage.js";
 
 	import { textboxes } from "$lib/Demo.js";
+
+	let delayedLinkTextbox = "";
+	onMount(_ => {
+		delayedLinkTextbox = textboxes.link;
+	});
 </script>
 
 <main>
@@ -14,12 +20,15 @@
 		Components
 	</h1>
 
+	<p>
+		Create a new line only on small screens with the MobileNewline component.
+	</p>
 	<span>
-		This stays in the same place 
+		Try resizing your browser window
 	</span>
 	<MobileNewline></MobileNewline>
 	<span>
-		| This will move onto a new line when the viewport is small, like on a phone. This is the MobileNewline component which takes no arguments
+		| or switching to mobile in devtools.
 	</span> <br> <br>
 
 	<p>
@@ -30,10 +39,6 @@
 	<p>
 		The component generates preload link elements. The value is the src (which is found by importing the file), and the key is the as attribute.
 	</p>
-
-
-	TODO: explain tools.js and base URL stuff with svelte.config.js
-
 
 	<br>
 	<h1>
@@ -49,7 +54,9 @@
 	<p>
 		All text also uses sans-sherif
 	</p>
-
+	
+	<br>
+	
 	<h1>
 		Misc
 	</h1>
@@ -58,9 +65,20 @@
 			The build process is configured to minify the HTML
 		</li>
 		<li>
-			<p> You can handle the base URL like this: </p>
-			<textarea readonly cols="80" rows="10">{textboxes.link}</textarea> <br>
+			<p> You can change the base URL by setting URL_PREFIX in svelte.config.js. It'll only be active in the build (not in the dev server) and it requires a rebuild to change. </p>
+			<textarea readonly cols="80" rows="10">{delayedLinkTextbox}</textarea> <br>
 			<a href={linkPage("linkDemo")}>Look, this works! :0</a>
+		</li>
+		<li>
+			<p> Tools.js currently only has 2 functions, but I'll include new ones in the future as I need them: </p>
+			<ul>
+				<li>
+					format.time takes a number of seconds and converts it into a HH:MM:SS format. The second argument lets you limit the number of digit pairs (e.g exclude hours by setting it to 2).
+				</li>
+				<li>
+					format.shorten takes a string as its first argument and the target length as the second. If it's over, it'll be trimmed to the max length and have the last 3 characters replaced with "...".
+				</li>
+			</ul>
 		</li>
 	</ol>
 </main>

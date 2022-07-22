@@ -3,7 +3,7 @@ echo "Installing for production...
 "
 
 cd server
-npm install
+npm install --production
 
 echo "
 Installed.

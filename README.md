@@ -1,6 +1,8 @@
 # Sveltekit-Template
 This probably isn't anything special, it's just a template for SvelteKit that's how I want things. It's got a couple of my own tools and example page to remind me how the URL prefixes work. It also has HTML minification installed, although it doesn't seem to fully minify it for some reason.
 
+The build won't work locally without a change, so see the example [online](https://hedgehog125.github.io/SvelteKit-Template). It also explains how to run the build locally. The dev server will work fine.
+
 # Installation
 Run in a Linux terminal from what you want to be the parent folder for the project:
 

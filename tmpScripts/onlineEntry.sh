@@ -1,4 +1,5 @@
-read -p "What do you want to call the project? (no spaces) " projectName
+read -p "
+What do you want to call the project? (no spaces) " projectName
 mkdir ${projectName}
 cd ${projectName}
 
