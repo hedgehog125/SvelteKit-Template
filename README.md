@@ -9,7 +9,7 @@ bash <(curl -s https://raw.githubusercontent.com/hedgehog125/SvelteKit-Template/
 ```
 
 # Manual installation
-Degit the repository and then run `npm install` in the "server", "static" and "gzipTool" folders. You'll also want to remove the license file and replace it with some sort of attribution to this template. e.g
+Degit the repository and then run `npm install` in the "server", "static" and "gzipTool" folders. You'll also want to remove the license file and put something like this in credits.txt:
 
 ```
 SvelteKit template: Nicholas Clack (Hedgehog125) https://hedgehog125.github.io/SvelteKit-Template

@@ -1,0 +1,36 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "build static",
+			"options": {
+				"cwd": "${workspaceFolder}/static/"
+			},
+			"command": "npm",
+			"args": [
+				"run",
+				"build"
+			]
+		},
+		{
+			"label": "backend",
+			"options": {
+				"cwd": "${workspaceFolder}/server/",
+			},
+			"command": "node",
+			"args": [
+				"index.js"
+			]
+		},
+		{
+			"label": "gzip",
+			"options": {
+				"cwd": "${workspaceFolder}/gzipTool/",
+			},
+			"command": "node",
+			"args": [
+				"gzip.js"
+			]
+		}
+	]
+}

@@ -139,6 +139,6 @@ dist
 .pnp.*
 
 .vs
-.vscode
-# You might want to change this
+# You might want to change this to just exclude .vscode
+.vscode/*
 !.vscode/tasks.json

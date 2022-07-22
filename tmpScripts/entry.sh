@@ -1,7 +1,7 @@
 cd $(dirname $0)/../ # The project folder
 realpath .
 
-./install.sh
+./devInstall.sh
 
 realpath .
 
@@ -12,4 +12,4 @@ then
     ./tmpScripts/cleanUp.sh
 fi
 
-echo "All done. Although you'll need to set up git yourself. Tip: Run install.sh to install the dependancies if you're on a new machine."
+echo "\nAll done. Although you'll need to set up git yourself.\nTip: Run devInstall.sh to install the dependancies if you're on a new machine."

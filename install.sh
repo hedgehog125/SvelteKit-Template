@@ -1,10 +1,7 @@
 cd $(dirname $0) # The project folder
-echo "Installing..."
-realpath .
+echo "Installing for production...\n"
 
-# cd server
-# npm install
-# cd ../static
-# npm install
-# cd ../gzipTool
-# npm install
+cd server
+npm install
+
+echo "\nInstalled.\n"
