@@ -1,4 +1,5 @@
 cd $(dirname $0) # The project folder
+echo "Installing..."
 realpath .
 
 # cd server
