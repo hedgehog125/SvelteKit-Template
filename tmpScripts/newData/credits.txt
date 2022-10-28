@@ -2,7 +2,7 @@
 SvelteKit template: Nicholas Clack (Hedgehog125) https://hedgehog125.github.io/SvelteKit-Template
 
 == Packages and tools ==
-= gzipTool (part of template) =
+= Tools folder (part of template) =
 node-gzip: (https://www.npmjs.com/package/node-gzip)
 sandboxed-path: (https://www.npmjs.com/package/sandboxed-path)
 

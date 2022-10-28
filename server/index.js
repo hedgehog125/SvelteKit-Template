@@ -4,14 +4,14 @@ TODO
 
 */
 
-const path = require("sandboxed-path");
-const moreFS = require("fs");
+import path from "sandboxed-path";
+import moreFS from "fs";
 const fs = moreFS.promises;
 
-const ipPackage = require("ip");
+import ipPackage from "ip";
 const IP = ipPackage.address();
 
-const express = require("express");
+import express from "express";
 const app = express();
 
 const state = {};

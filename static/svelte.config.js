@@ -1,13 +1,13 @@
+const URL_PREFIX = "SvelteKit-Template"; // <-- Set this to the repository name if you're hosting on GitHub Pages (unless it's your homepage site), as all the URLs will need to be prefixed with it. If you don't want a prefix, set it to an empty string
+
+
 import adapter from "@sveltejs/adapter-static";
 
-const URL_PREFIX = "SvelteKit-Template"; // <-- Set this to the repository name if you're hosting on GitHub Pages (unless it's your homepage site), as all the URLs will need to be prefixed with it
-const IS_TEST_BUILD = false; // If you want to do a test build, set this to true so the prefix doesn't get added
-
-
 const dev = process.env.NODE_ENV != "production";
+const disableBaseURL = process.env.DISABLE_BASE_URL == null? false : process.env.DISABLE_BASE_URL == "true";
 const baseURL = (
 	dev
-	|| IS_TEST_BUILD
+	|| disableBaseURL
 	|| URL_PREFIX == ""
 )? "" : `/${URL_PREFIX}`;
 const buildDir = "build";

@@ -1,6 +1,6 @@
 === Code ===
 == Packages and tools ==
-= gzipTool =
+= Tools folder =
 node-gzip: (https://www.npmjs.com/package/node-gzip)
 sandboxed-path: (https://www.npmjs.com/package/sandboxed-path)
 
