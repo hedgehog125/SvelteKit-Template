@@ -64,22 +64,27 @@ Now run this file again.`
 	const buildFiles = await recursiveList(BUILD_PATH);
 	const buildPath = path.accessLocal(BUILD_PATH);
 
+	for (let fileInfo of buildFiles) {
+		let newfilePath = path.sandboxPath(path.join(deployPath, fileInfo.path));
+		let fileName = path.basename(newfilePath);
+		if (fileName[0] == ".") continue;
+		if (! fileInfo.isFolder) continue;
+
+		await fs.mkdir(newfilePath);
+	}
+
 	let tasks = [];
 	for (let fileInfo of buildFiles) {
 		let newfilePath = path.sandboxPath(path.join(deployPath, fileInfo.path));
 		let fileName = path.basename(newfilePath);
 		if (fileName[0] == ".") continue;
+		if (fileInfo.isFolder) continue;
 		
 
-		if (fileInfo.isFolder) {
-			tasks.push(fs.mkdir(newfilePath));
-		}
-		else {
-			tasks.push((async _ => {
-				let contents = await fs.readFile(path.join(buildPath, fileInfo.path));
-				await fs.writeFile(newfilePath, contents);
-			})());
-		}
+		tasks.push((async _ => {
+			let contents = await fs.readFile(path.join(buildPath, fileInfo.path));
+			await fs.writeFile(newfilePath, contents);
+		})());
 	}
 	await Promise.all(tasks);
 

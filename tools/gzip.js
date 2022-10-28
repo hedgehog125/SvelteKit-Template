@@ -18,22 +18,26 @@ const main = async _ => {
 	const gzipPath = path.accessLocal(GZIP_PATH);
 	const buildPath = path.accessLocal(BUILD_PATH);
 
+	for (let fileInfo of buildFiles) {
+		let newfilePath = path.sandboxPath(path.join(gzipPath, fileInfo.path));
+		let fileName = path.basename(newfilePath);
+		if (fileName[0] == ".") continue;
+		if (! fileInfo.isFolder) continue;
+
+		await fs.mkdir(newfilePath);
+	}
+
 	let tasks = [];
 	for (let fileInfo of buildFiles) {
 		let newfilePath = path.sandboxPath(path.join(gzipPath, fileInfo.path));
 		let fileName = path.basename(newfilePath);
 		if (fileName[0] == ".") continue;
+		if (fileInfo.isFolder) continue;
 		
-
-		if (fileInfo.isFolder) {
-			tasks.push(fs.mkdir(newfilePath));
-		}
-		else {
-			tasks.push((async _ => {
-				let compressed = await gzip(await fs.readFile(path.join(buildPath, fileInfo.path)));
-				await fs.writeFile(newfilePath + ".gz", compressed);
-			})());
-		}
+		tasks.push((async _ => {
+			let compressed = await gzip(await fs.readFile(path.join(buildPath, fileInfo.path)));
+			await fs.writeFile(newfilePath + ".gz", compressed);
+		})());
 	}
 	await Promise.all(tasks);
 
