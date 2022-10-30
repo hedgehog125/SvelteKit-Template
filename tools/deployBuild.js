@@ -1,6 +1,6 @@
 const BUILD_PATH = "../static/build";
 const DEPLOY_PATH = "../../Deploys/SvelteKit-Template/";
-const CONFIGURED = true;
+const CONFIGURED = false;
 
 
 import fs from "fs/promises";
