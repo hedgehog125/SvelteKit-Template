@@ -16,7 +16,7 @@ const main = async _ => {
 		console.error(
 `This tool makes it a little easier to deploy your static builds to GitHub Pages. It'll delete files in your deploy path but it won't unless you create a special file, it also won't commit or push your changes to GitHub.
 
-You haven't configured this tool yet. Clone this repository again somewhere in the folder ${parentFolder} or in any child folders of that (I'd recommend ${deployFolder}), but switch its branch to "gh-pages" (make that branch if you haven't already).
+You haven't configured this tool yet. Clone this repository again somewhere in the folder ${parentFolder} or in any child folders of that (I'd recommend ${deployFolder}), but switch its branch to "gh-pages" (if you haven't already, make that branch and delete everything, including hidden files, from it, *except* the .git folder).
 		
 Then set "DEPLOY_PATH" to the relative path of your deploy repository, do this by editing the file "tools/deployBuild.js". It should start with "../../" to take you to ${parentFolder}. e.g "const DEPLOY_PATH = "${deployFolder}";
 	
