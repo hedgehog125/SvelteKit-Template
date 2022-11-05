@@ -1,4 +1,54 @@
-<!DOCTYPE html><html lang=en><meta charset=utf-8><link href=/SvelteKit-Template/favicon.png rel="alternate icon" type=image/png sizes=32x32><link href=/SvelteKit-Template/favicon.svg rel=icon type=image/svg+xml size=64x64><meta content="**Insert main colour but about 15-20 darker on each RGB channel (assuming 0-255 range)**" name=theme-color><link href=/SvelteKit-Template/manifest.json rel=manifest><link href=/SvelteKit-Template/appIcon.png rel=apple-touch-icon type=image/png sizes=512x512><meta content="width=device-width,initial-scale=1" name=viewport><meta content="**Insert Value**" name=description><title>**Insert Name**</title><meta content="" http-equiv=content-security-policy><link href=/SvelteKit-Template/app/immutable/assets/index-d116e0d4.css rel=stylesheet><link href=/SvelteKit-Template/app/immutable/start-b81d4e5a.js rel=modulepreload><link href=/SvelteKit-Template/app/immutable/chunks/index-205528a3.js rel=modulepreload><link href=/SvelteKit-Template/app/immutable/chunks/paths-abcb058a.js rel=modulepreload><link href=/SvelteKit-Template/app/immutable/layout.svelte-c8038a21.js rel=modulepreload><link href=/SvelteKit-Template/app/immutable/pages/index.svelte-a3c5d5a3.js rel=modulepreload><link href=/SvelteKit-Template/app/immutable/chunks/LinkPage-a185863e.js rel=modulepreload><div><main><p>This is a simple demo of the small tools that are included in this template. As well as some reminders for problems I've already solved.</p><br><h1>Components</h1><p>Create a new line only on small screens with the MobileNewline component.</p><span>Try resizing your browser window</span><br class=svelte-t39mn0><span>| or switching to mobile in devtools.</span><br><br><p>Preload assets with the Preload component in the page's svelte file. Use it like this:</p><textarea cols=80 readonly rows=12><script>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+
+		<link rel="alternate icon" href="/SvelteKit-Template/favicon.png" type="image/png" sizes="32x32"/> <!-- The resolutions here make the browser more likely to use the svg if possible -->
+		<link rel="icon" href="/SvelteKit-Template/favicon.svg" type="image/svg+xml" size="64x64"/>
+
+		<meta name="theme-color" content="**Insert main colour but about 15-20 darker on each RGB channel (assuming 0-255 range)**">
+		<link rel="manifest" href="/SvelteKit-Template/manifest.json"/>
+		<link rel="apple-touch-icon" sizes="512x512" type="image/png" href="/SvelteKit-Template/appIcon.png">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<meta name="description" content="**Insert Value**"/>
+
+		<title>**Insert Name**</title>
+
+		<meta http-equiv="content-security-policy" content="">
+		<link href="/SvelteKit-Template/app/immutable/assets/_layout-1fdb24be.css" rel="stylesheet">
+		<link href="/SvelteKit-Template/app/immutable/assets/_page-d116e0d4.css" rel="stylesheet">
+		<link rel="modulepreload" href="/SvelteKit-Template/app/immutable/start-bbf853c4.js">
+		<link rel="modulepreload" href="/SvelteKit-Template/app/immutable/chunks/index-96af3a5a.js">
+		<link rel="modulepreload" href="/SvelteKit-Template/app/immutable/chunks/singletons-11b62e69.js">
+		<link rel="modulepreload" href="/SvelteKit-Template/app/immutable/chunks/paths-6ff7d232.js">
+		<link rel="modulepreload" href="/SvelteKit-Template/app/immutable/components/pages/_layout.svelte-4000adf0.js">
+		<link rel="modulepreload" href="/SvelteKit-Template/app/immutable/modules/pages/_layout.js-6a08c268.js">
+		<link rel="modulepreload" href="/SvelteKit-Template/app/immutable/chunks/_layout-04d04af2.js">
+		<link rel="modulepreload" href="/SvelteKit-Template/app/immutable/components/pages/_page.svelte-630342d6.js">
+		<link rel="modulepreload" href="/SvelteKit-Template/app/immutable/chunks/LinkPage-c78fc264.js">
+	</head>
+	<body>
+		<div>
+
+
+<main><p>This is a simple demo of the small tools that are included in this template. As well as some reminders for problems I&#39;ve already solved.
+	</p> <br>
+
+	<h1>Components
+	</h1>
+
+	<p>Create a new line only on small screens with the MobileNewline component.
+	</p>
+	<span>Try resizing your browser window
+	</span>
+	<br class="svelte-t39mn0"> 
+	<span>| or switching to mobile in devtools.
+	</span> <br> <br>
+
+	<p>Preload assets with the Preload component in the page&#39;s svelte file. Use it like this:
+	</p>
+	<textarea readonly cols="80" rows="12"><script>
 import Preload from &quot;$util/Preload.svelte&quot;;
 import downloadIcon from &quot;$img/download.svg&quot;;
 const assetsToPreload = {
@@ -8,20 +58,59 @@ const assetsToPreload = {
 };
 </script>
 <svelte:head>
-	<preload {assetstopreload}></preload>
-</svelte:head></textarea><br><p>The component generates preload link elements. The value is the src (which is found by importing the file), and the key is the as attribute.</p><br><h1>Defaults</h1><h2>Defined in app.html</h2><p>This button has a pointer cursor</p><button>Tada</button><br><p>All text also uses sans-sherif</p><br><h1>Misc</h1><ol><li>The build process is configured to minify the HTML<li><p>You can change the base URL by setting URL_PREFIX in svelte.config.js. It'll only be active in the build (not in the dev server) and it requires a rebuild to change.</p><textarea cols=80 readonly rows=10></textarea><br><a href=/SvelteKit-Template/linkDemo>Look, this works! :0</a><li><p>Tools.js currently only has 2 functions, but I'll include new ones in the future as I need them:<ul><li>format.time takes a number of seconds and converts it into a HH:MM:SS format. The second argument lets you limit the number of digit pairs (e.g exclude hours by setting it to 2).<li>format.shorten takes a string as its first argument and the target length as the second. If it's over, it'll be trimmed to the max length and have the last 3 characters replaced with "...".</ul></ol></main><script data-sveltekit-hydrate=gbb7gg type=module>import { start } from "/SvelteKit-Template/app/immutable/start-b81d4e5a.js";
-		start({
-			target: document.querySelector('[data-sveltekit-hydrate="gbb7gg"]').parentNode,
-			paths: {"base":"/SvelteKit-Template","assets":"/SvelteKit-Template"},
-			session: {},
-			route: true,
-			spa: false,
-			trailing_slash: "never",
-			hydrate: {
-				status: 200,
-				error: null,
-				nodes: [0, 2],
-				params: {},
-				routeId: ""
-			}
-		});</script></div><style>*{font-family:sans-serif}button{cursor:pointer}</style>
+	<Preload {assetsToPreload}></Preload>
+</svelte:head></textarea> <br>
+
+	<p>The component generates preload link elements. The value is the src (which is found by importing the file), and the key is the as attribute.
+	</p>
+
+	<br>
+	<h1>Defaults
+	</h1>
+	<h2>Defined in app.html</h2>
+
+	<p>This button has a pointer cursor
+	</p>
+	<button>Tada</button> <br>
+
+	<p>All text also uses sans-serif
+	</p>
+	
+	<br>
+	
+	<h1>Misc
+	</h1>
+	<ol><li>The build process is configured to minify the HTML
+		</li>
+		<li><p>You can change the base URL by setting URL_PREFIX in svelte.config.js. It&#39;ll only be active in the build (not in the dev server) and it requires a rebuild to change. You can also do a build without it using the npm script &quot;testBuild&quot; or by using the VS Code task. </p>
+			<textarea readonly cols="80" rows="10"></textarea> <br>
+			<a href="/SvelteKit-Template/linkDemo">Look, this works! :0</a></li>
+		<li><p>Tools.js currently only has 2 functions, but I&#39;ll include new ones in the future as I need them: </p>
+			<ul><li>format.time takes a number of seconds and converts it into a HH:MM:SS format. The second argument lets you limit the number of digit pairs (e.g exclude hours by setting it to 2).
+				</li>
+				<li>format.shorten takes a string as its first argument and the target length as the second. If it&#39;s over, it&#39;ll be trimmed to the max length and have the last 3 characters replaced with &quot;...&quot;.
+				</li></ul></li></ol></main>
+
+
+		<script type="module" data-sveltekit-hydrate="1vmp8cq">
+			import { start } from "/SvelteKit-Template/app/immutable/start-bbf853c4.js";
+
+			start({
+				env: {},
+				hydrate: {
+					status: 200,
+					error: null,
+					node_ids: [0, 2],
+					params: {},
+					route: {"id":"/"},
+					data: [null,null],
+					form: null
+				},
+				paths: {"base":"/SvelteKit-Template","assets":"/SvelteKit-Template"},
+				target: document.querySelector('[data-sveltekit-hydrate="1vmp8cq"]').parentNode,
+				trailing_slash: "never"
+			});
+		</script>
+	</div>
+	</body>
+</html>
