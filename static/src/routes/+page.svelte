@@ -52,7 +52,7 @@
 	<button>Tada</button> <br>
 
 	<p>
-		All text also uses sans-sherif
+		All text also uses sans-serif
 	</p>
 	
 	<br>
@@ -65,7 +65,7 @@
 			The build process is configured to minify the HTML
 		</li>
 		<li>
-			<p> You can change the base URL by setting URL_PREFIX in svelte.config.js. It'll only be active in the build (not in the dev server) and it requires a rebuild to change. </p>
+			<p> You can change the base URL by setting URL_PREFIX in svelte.config.js. It'll only be active in the build (not in the dev server) and it requires a rebuild to change. You can also do a build without it using the npm script "testBuild" or by using the VS Code task. </p>
 			<textarea readonly cols="80" rows="10">{delayedLinkTextbox}</textarea> <br>
 			<a href={linkPage("linkDemo")}>Look, this works! :0</a>
 		</li>

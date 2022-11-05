@@ -1,7 +1,7 @@
 # Specific to this program
 static/build
 
-# From sveltekit gitignore
+# From SvelteKit gitignore
 .DS_Store
 .svelte-kit
 .vercel_build_output

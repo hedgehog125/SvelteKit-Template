@@ -10,8 +10,10 @@ ip: (https://www.npmjs.com/package/ip)
 sandboxed-path: (https://www.npmjs.com/package/sandboxed-path)
 
 = Frontend build server =
-Sveltekit (https://kit.svelte.dev/)
+SvelteKit (https://kit.svelte.dev/)
 html-minifier (https://www.npmjs.com/package/html-minifier)
+Vite: (https://www.npmjs.com/package/vite)
+cross-env (https://www.npmjs.com/package/cross-env)
 
 === Images ===
 == Key ==
