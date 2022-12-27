@@ -10,7 +10,6 @@ const baseURL = (
 	|| disableBaseURL
 	|| URL_PREFIX == ""
 )? "" : `/${URL_PREFIX}`;
-const buildDir = "build";
 
 /** @type {import("@sveltejs/kit").Config} */
 const config = {
@@ -28,12 +27,7 @@ const config = {
 			$vid: "src/lib/vids"
 		},
 
-		adapter: adapter({
-			pages: buildDir,
-			assets: buildDir,
-			fallback: null
-		}),
-		trailingSlash: "always"
+		adapter: adapter()
 	}
 };
 
