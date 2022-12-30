@@ -19,8 +19,8 @@
 	],
 	"name": "**Insert value**",
 	"short_name": "**Insert value**",
-	"background_color": "white",
-	"theme_color": "#1e3bbe",
+	"background_color": "**Insert value**",
+	"theme_color": "**Insert value**",
 	"description": "**Insert value**",
 	"display": "fullscreen",
 	"orientation": "any"
