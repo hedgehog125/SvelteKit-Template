@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { linkPage } from "$util/Tools.js";
 
 	const escapedText = "<base>";

@@ -2,6 +2,7 @@ const URL_PREFIX = "SvelteKit-Template"; // <-- Set this to the repository name 
 
 
 import adapter from "@sveltejs/adapter-static";
+import { vitePreprocess } from "@sveltejs/kit/vite";
 
 const dev = process.env.NODE_ENV != "production";
 const disableBaseURL = process.env.DISABLE_BASE_URL == null? false : process.env.DISABLE_BASE_URL == "true";
@@ -13,6 +14,8 @@ const baseURL = (
 
 /** @type {import("@sveltejs/kit").Config} */
 const config = {
+	preprocess: vitePreprocess(),
+
 	kit: {
 		appDir: "app",
 		paths: {

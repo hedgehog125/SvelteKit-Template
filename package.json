@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "@types/html-minifier": "^4.0.2",
+    "@types/node": "^18.14.0"
+  }
+}

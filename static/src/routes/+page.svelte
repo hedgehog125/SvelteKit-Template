@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { onMount } from "svelte";
 	import MobileNewline from "$util/MobileNewline.svelte";
 	import { linkPage } from "$util/Tools.js";
@@ -7,7 +7,7 @@
 	import { textboxes } from "$lib/Demo.js";
 
 	let delayedLinkTextbox = "";
-	onMount(_ => {
+	onMount(() => {
 		delayedLinkTextbox = textboxes.link;
 	});
 </script>

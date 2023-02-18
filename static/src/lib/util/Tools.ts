@@ -1,12 +1,12 @@
 import { base } from "$app/paths";
 
-export function linkPage(href) {
+export function linkPage(href: string): string {
 	if (href.endsWith("/")) href = href.slice(0, -1);
 
     return base + "/" + href;
 };
 
-export function formatTime(total, count = 3) {
+export function formatTime(total: number, count = 3): string {
 	let hours = Math.floor(total / (60 * 60));
 	total -= hours * (60 * 60);
 	let minutes = Math.floor(total / 60);

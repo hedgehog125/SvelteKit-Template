@@ -1,5 +1,5 @@
-<script>
-    export let assetsToPreload;
+<script lang="ts">
+    export let assetsToPreload: Record<string, string[]>;
 </script>
 
 <main>

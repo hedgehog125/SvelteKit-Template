@@ -1,5 +1,6 @@
 import { sveltekit } from "@sveltejs/kit/vite";
-import { versionedWorker, fetchLast, readLast } from "sveltekit-plugin-versioned-worker";
+import { versionedWorker, fetchLast, readLast } from "sveltekit-plugin-versioned-worker"; // Currently rewriting this in TypeScript
+import { defineConfig } from "vite";
 
 const config = {
 	plugins: [

@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { RegisterWorker } from "sveltekit-plugin-versioned-worker/components";
 </script>
 
