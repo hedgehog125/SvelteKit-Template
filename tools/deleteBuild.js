@@ -4,7 +4,7 @@ import path from "sandboxed-path";
 path.changeSandboxScope.backOne();
 import { clearDir } from "./src/helper.js";
 
-const main = async _ => {
+const main = async () => {
 	console.log("Deleting build...");
 	clearDir(BUILD_PATH);
 	console.log("Done");

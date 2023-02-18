@@ -11,7 +11,7 @@ path.changeSandboxScope.backOne();
 import { clearDir, recursiveList } from "./src/helper.js";
 
 const shouldIgnore = fileName => fileName.startsWith(".") && (! DOTFILES_TO_COPY.includes(fileName));
-const main = async _ => {
+const main = async () => {
 	if (! CONFIGURED) {
 		const parentFolder = path.join(process.cwd(), "../../");
 		const deployFolder = path.join(parentFolder, "Deploys");
@@ -83,7 +83,7 @@ Now run this file again.`
 		if (fileInfo.isFolder) continue;
 		
 
-		tasks.push((async _ => {
+		tasks.push((async () => {
 			let contents = await fs.readFile(path.join(buildPath, fileInfo.path));
 			await fs.writeFile(newfilePath, contents);
 		})());

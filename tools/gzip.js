@@ -8,7 +8,7 @@ import { clearDir, recursiveList } from "./src/helper.js";
 
 import { gzip } from "node-gzip";
 
-const main = async _ => {
+const main = async () => {
 	console.log("Deleting previous gzipped build...");
 	await clearDir(GZIP_PATH);
 
@@ -34,7 +34,7 @@ const main = async _ => {
 		if (fileName[0] == ".") continue;
 		if (fileInfo.isFolder) continue;
 		
-		tasks.push((async _ => {
+		tasks.push((async () => {
 			let compressed = await gzip(await fs.readFile(path.join(buildPath, fileInfo.path)));
 			await fs.writeFile(newfilePath + ".gz", compressed);
 		})());

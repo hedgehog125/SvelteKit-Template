@@ -1,5 +1,6 @@
 # Specific to this program
 static/build
+server/build
 
 # From SvelteKit gitignore
 .DS_Store
